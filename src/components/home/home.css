@@ -1,6 +1,19 @@
-/* styles.css */
+html {
+    height: 100%; /* Garante que a altura total seja usada */
+    margin: 0; /* Remove margens padrão */
+    padding: 0;
+    font-family: 'Barlow', sans-serif;
+    display: flex;
+    flex-direction: column;
+}
 
-/* Estilo de Fonte e Corpo */
+header, footer {
+    background-color: #222;
+    color: #fff;
+    padding: 0.5rem; /* Reduz o tamanho do header e footer */
+    text-align: center;
+}
+
 body {
     --branco: #FFFFFF;
     --vermelho: #FF0000;
@@ -8,13 +21,21 @@ body {
     height: 4000px;
 }
 
-/* Cabeçalho e Rodapé */
 header, footer {
     background-color: #222;
     color: #fff;
 }
 
-/* Navegação e Links */
+.cardNoticia{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height: 500px;
+    width: 500px;
+}
 .nav-link {
     color: #fff;
 }
@@ -46,45 +67,41 @@ header, footer {
     transform-style: preserve-3d;
   }
   
-  /* Overlay para escurecer o banner */
   .banner-overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Fundo semitransparente */
+    background: rgba(0, 0, 0, 0.5);
     z-index: 1;
   }
   
-  /* Texto do banner */
   .banner-text {
     position: relative;
-    z-index: 2; /* Sobrepõe a camada escura */
+    z-index: 2; 
     text-align: center;
     padding: 20px;
     border-radius: 10px;
-    background: rgba(255, 255, 255, 0.2); /* Fundo branco semitransparente */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Sombra para destacar o texto */
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
   }
   
-  /* Estilização do título e parágrafo */
   .banner-text h1 {
     font-size: 3rem;
     font-weight: bold;
-    color: #fff; /* Texto branco */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra no texto */
+    color: #fff; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
     margin-bottom: 10px;
   }
   
   .banner-text p {
     font-size: 1.5rem;
-    color: #fff; /* Texto branco */
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Sombra no texto */
+    color: #fff; 
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); 
     margin: 0;
   }
   
-/* Botões */
 .btn-primary {
     background-color: #FF0000;
     border: none;
@@ -93,17 +110,11 @@ header, footer {
     background-color: #cc0000;
 }
 
-/* Títulos */
 
-
-/* Animação de Carrossel */
 .carousel-inner {
     transition: transform 0.6s ease;
 }
 
-body {
-    font-family: 'Poppins', sans-serif;
-}
 
 .header {
     background-color: #343a40;
@@ -195,12 +206,42 @@ body {
         flex-direction: column;
         text-align: center;
     }
+
     .section-title {
         font-size: 1.5rem;
     }
+
+    .equipe-card {
+        width: 90%; /* Ajusta largura do cartão */
+        margin: 0 auto; /* Centraliza o cartão */
+    }
+
+    .cardNoticia {
+        height: auto;
+        width: 90%;
+    }
 }
-.equipe-card:hover {
-    transform: scale(1.05);
-    transition: transform 0.3s;
+
+@media (max-width: 480px) {
+    .banner-text h1 {
+        font-size: 2rem;
+    }
+
+    .banner-text p {
+        font-size: 1rem;
+    }
+
+    .read-more {
+        font-size: 0.9rem;
+    }
+
+    .equipe-card {
+        width: 100%;
+        margin: 10px auto;
+    }
+
+    .cardNoticia {
+        width: 100%;
+        height: auto;
+    }
 }
-    

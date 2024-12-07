@@ -1,4 +1,4 @@
-/*style.css*/
+/* style.css */
 body {
     display: flex;
     align-items: center;
@@ -6,23 +6,54 @@ body {
     font-family: sans-serif;
     line-height: 1.5;
     min-height: 100vh;
-    background: #f3f3f3;
+    background-image: url('../assets/img/senna-chuva.jpg');
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center; 
+    margin: 0; 
+    padding: 0; 
     flex-direction: column;
-    margin: 0;
 }
 
 .main {
     background-color: #fff;
     border-radius: 15px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-    padding: 10px 20px;
+    padding: 20px;
     transition: transform 0.2s;
-    width: 500px;
+    width: 500px; 
     text-align: center;
 }
 
+@media (max-width: 768px) {
+    .main {
+        width: 90%; 
+        padding: 15px;
+    }
+
+    body {
+        padding: 10px; 
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem; 
+    }
+
+    button {
+        font-size: 14px; 
+        padding: 10px;
+    }
+
+    input {
+        padding: 8px; 
+    }
+}
+
 h1 {
-    color:red;
+    color: red;
+    font-size: 2rem; 
 }
 
 label {

@@ -1,44 +1,47 @@
+/* style.css */
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #f8f9fa;
+    background-image: url('../assets/img/sennaa.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0;
+    padding: 0;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 main {
-    width: 100%;    
+    width: 100%;
     max-width: 400px;
     padding: 20px;
     border-radius: 10px;
     background-color: #fff;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
+
 .form-label {
     font-weight: 600;
 }
+
 .btn-success {
     width: 100%;
     font-weight: 700;
 }
+
 .form-control {
     border-radius: 5px;
 }
+
 .input-group-text {
     background: #fff;
     border-right: none;
 }
+
 .form-control:focus {
     box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-}
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
 }
 
 .container {
@@ -124,4 +127,34 @@ button:hover {
 .strong {
     width: 100%;
     background-color: rgb(255, 0, 0);
+}
+
+@media (max-width: 768px) {
+    main, .container {
+        width: 90%; 
+        padding: 15px; 
+    }
+
+    h2 {
+        font-size: 1.5rem; 
+    }
+}
+
+@media (max-width: 480px) {
+    input {
+        padding: 6px; 
+    }
+
+    button {
+        font-size: 14px; 
+        padding: 8px; 
+    }
+
+    h2 {
+        font-size: 1.2rem; 
+    }
+
+    .password-hint, .error {
+        font-size: 0.8em; 
+    }
 }
